@@ -16,9 +16,7 @@
 
 <img src="https://github.com/CAMMA-public/rendezvous/raw/main/files/examples-1.png" width="100%">
 
-This repository contains the implementation code, inference code, and evaluation scripts.
-<br />
-[![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405) [![Journal Publication](https://img.shields.io/badge/Spinger-LNCS%2012263-magenta)](https://link.springer.com/chapter/10.1007/978-3-030-59716-0_35)
+This repository contains the implementation code, inference code, and evaluation scripts.<br />[![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405) [![Journal Publication](https://img.shields.io/badge/Spinger-LNCS%2012263-magenta)](https://link.springer.com/chapter/10.1007/978-3-030-59716-0_35)
 
 
 
@@ -112,6 +110,7 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 
 # Dataset Zoo
 
+* CholecT40
 * [CholecT45](https://github.com/CAMMA-public/cholect45) 
 * CholecT50
 * [Dataset splits](https://arxiv.org/abs/2204.05235)
