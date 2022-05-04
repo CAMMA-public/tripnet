@@ -97,7 +97,7 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 <br />
 
 ## Quick Start
-* clone the git repository: ``` git clone https://github.com/CAMMA-public/rendezvous.git ```
+* clone the git repository: ``` git clone https://github.com/CAMMA-public/tripnet.git ```
 * install all the required libraries according to chosen your framework.
 * download the dataset
 * download model's weights
