@@ -7,6 +7,19 @@ import sys
 SCOPE = 'tripnet'
 
 
+class Tripnet(object):
+    def __init__(self, model='tripnet', basename="resnet18", num_tool=6, num_verb=10, num_target=15, num_triplet=100, hr_output=False, dict_map_url="./"):
+        super(Tripnet, self).__init__()
+        self.encoder = Encoder(basename, num_tool, num_verb, num_target, num_triplet, hr_output=hr_output)
+        self.decoder = Decoder(num_tool, num_verb, num_target, num_triplet, dict_map_url)
+
+    def __call__(self, inputs, is_training):
+        with tf.variable_scope(SCOPE):
+            enc_i, enc_v, enc_t = self.encoder(inputs=inputs, is_training=is_training)
+            dec_ivt = self.decoder(enc_i, enc_v, enc_t, is_training=is_training)
+        return enc_i, enc_v, enc_t, dec_ivt
+
+
 class Modules():
     def __init__(self):
         super(Modules, self).__init__()
@@ -143,19 +156,6 @@ class Modules():
             outputs   = tf.reshape(outputs, shape=out_dims)                
             print('\tBuilding unit: {}: {} --> {}'.format( scope.name, inputs.get_shape(),  outputs.get_shape()))
         return outputs
-
-
-class Tripnet(object):
-    def __init__(self, model='tripnet', basename="resnet18", num_tool=6, num_verb=10, num_target=15, num_triplet=100, hr_output=False, dict_map_url="./"):
-        super(Tripnet, self).__init__()
-        self.encoder = Encoder(basename, num_tool, num_verb, num_target, num_triplet, hr_output=hr_output)
-        self.decoder = Decoder(num_tool, num_verb, num_target, num_triplet, dict_map_url)
-
-    def __call__(self, inputs, is_training):
-        with tf.variable_scope(SCOPE):
-            enc_i, enc_v, enc_t = self.encoder(inputs=inputs, is_training=is_training)
-            dec_ivt = self.decoder(enc_i, enc_v, enc_t, is_training=is_training)
-        return enc_i, enc_v, enc_t, dec_ivt
 
 
 class Encoder(Modules):
