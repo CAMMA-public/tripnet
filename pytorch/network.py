@@ -67,7 +67,7 @@ class Tripnet(nn.Module):
     def __init__(self, basename="resnet18", num_tool=6, num_verb=10, num_target=15, num_triplet=100, hr_output=False, dict_map_url="./"):
         super(Tripnet, self).__init__()
         self.encoder = Encoder(basename, num_tool, num_verb, num_target, num_triplet, hr_output=hr_output)
-        self.decoder = _3DIS(num_tool, num_verb, num_target, num_triplet, dict_map_url)
+        self.decoder = Decoder(num_tool, num_verb, num_target, num_triplet, dict_map_url)
      
     def forward(self, inputs):
         enc_i, enc_v, enc_t = self.encoder(inputs)
@@ -190,9 +190,9 @@ class CAG(nn.Module):
 
  
 # 3D interaction space
-class _3DIS(nn.Module):
+class Decoder(nn.Module):
     def __init__(self, num_tool, num_verb, num_target, num_triplet, dict_map_url="./"):
-        super(_3DIS, self).__init__()
+        super(Decoder, self).__init__()
         self.num_tool       = num_tool
         self.num_verb       = num_verb
         self.num_target     = num_target

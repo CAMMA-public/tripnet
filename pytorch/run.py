@@ -444,10 +444,9 @@ if is_train:
 
 #%% eval
 if is_test:
-    print("Test weight: ", test_ckpt)
+    print("Test weight used: ", test_ckpt)
     model.load_state_dict(torch.load(test_ckpt))
     mAP.reset_global()
-
     for test_dataloader in test_dataloaders:
         test_loop(test_dataloader, model, activation, final_eval=True)
     if set_chlg_eval:
@@ -473,6 +472,7 @@ if is_test:
     print(f'Mean AP:  I  |  V  |  T  |  IV  |  IT  |  IVT ', file=open(logfile, 'a+'))
     print(f':::::: : {mAP_i["mAP"]:.4f} | {mAP_v["mAP"]:.4f} | {mAP_t["mAP"]:.4f} | {mAP_iv["mAP"]:.4f} | {mAP_it["mAP"]:.4f} | {mAP_ivt["mAP"]:.4f} ', file=open(logfile, 'a+'))
     print('='*50, file=open(logfile, 'a+'))
+    print("Test results saved @ ", logfile)
 
 #%% End
 print("All done!\nShutting done...\nIt is what it is ...\nC'est finis! {}".format("-"*maxlen) , file=open(logfile, 'a+'))
