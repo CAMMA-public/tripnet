@@ -31,6 +31,8 @@ Furthermore, we present an approach to recognize these triplets directly from th
 
 
 # News and Updates
+- <b>[2022.05.09]:</b> TensorFlow v2 implementation code released!
+- <b>[2022.05.09]:</b> TensorFlow v1 implementation code released!
 - <b>[2022.05.03]:</b> PyTorch implementation code released!
 
 <br />
