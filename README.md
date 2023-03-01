@@ -31,6 +31,8 @@ Furthermore, we present an approach to recognize these triplets directly from th
 
 
 # News and Updates
+
+- <b>[2023.02.20]:</b> [CholecT50](https://github.com/CAMMA-public/cholect50) dataset is now public!
 - <b>[2022.05.09]:</b> TensorFlow v2 implementation code released!
 - <b>[2022.05.09]:</b> TensorFlow v1 implementation code released!
 - <b>[2022.05.03]:</b> PyTorch implementation code released!
@@ -114,7 +116,7 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 
 * CholecT40
 * [CholecT45](https://github.com/CAMMA-public/cholect45) 
-* CholecT50
+* [CholecT50](https://github.com/CAMMA-public/cholect50) 
 * [Dataset splits](https://arxiv.org/abs/2204.05235)
 
 <br />
@@ -196,9 +198,19 @@ Adding custom datasets is quite simple, what you need to do are:
 ## PyTorch
 | Network   | Base      | Resolution | Dataset   | Data split  |  Link             |
 ------------|-----------|------------|-----------|-------------|-------------------|
-| Tripnet   | ResNet-18 | Low        | CholecT50 | RDV         |   [Google] [Baidu] |
-| Tripnet   | ResNet-18 | High       | CholecT50 | RDV         |   [Google] [Baidu] |
-| Tripnet   | ResNet-18 | Low        | CholecT50 | Challenge   |   [Google] [Baidu] |
+| Tripnet   | ResNet-18 | Low        | CholecT50 | RDV         |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect50_batchnorm_lowres.pth) |
+| Tripnet   | ResNet-18 | High       | CholecT50 | RDV         |   [Download]|
+| Tripnet   | ResNet-18 | Low        | CholecT50 | Challenge   |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect50_challenge_k0_batchnorm_lowres.pth.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT50 | crossval k1 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect50_crossval_k1_layernorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT50 | crossval k2 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect50_crossval_k2_batchnorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT50 | crossval k3 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect50_crossval_k3_batchnorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT50 | crossval k4 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect50_crossval_k4_layernorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT50 | crossval k5 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect50_crossval_k5_layernorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT45 | crossval k1 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect45_crossval_k1_layernorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT45 | crossval k2 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect45_crossval_k2_batchnorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT45 | crossval k3 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect45_crossval_k3_batchnorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT45 | crossval k4 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect45_crossval_k4_layernorm_lowres.pth) |
+| Tripnet| ResNet-18 | Low        | CholecT45 | crossval k5 |   [Download](https://s3.unistra.fr/camma_public/github/tripnet/tripnet_cholect45_crossval_k5_layernorm_lowres.pth) |
 
 <br />
 
@@ -206,8 +218,8 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
-| Tripnet   | ResNet-18 | High       | CholecT50 | RDV           |  [Google] [Baidu] |
-| Tripnet   | ResNet-18 | High       | CholecT50 | Challenge     |  [Google] [Baidu] |
+| Tripnet   | ResNet-18 | High       | CholecT50 | RDV           |  [Download] |
+| Tripnet   | ResNet-18 | High       | CholecT50 | Challenge     |  [Download] |
 
 <br />
 
@@ -218,9 +230,9 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
-| Tripnet   | ResNet-18 | High       | CholecT50 | RDV           |   [Google] [Baidu] |
-| Tripnet   | ResNet-18 | Low        | CholecT50 | RDV           |   [Google] [Baidu] |
-| Tripnet   | ResNet-18 | High       | CholecT50 | Challenge     |   [Google] [Baidu] |
+| Tripnet   | ResNet-18 | High       | CholecT50 | RDV           |   [Download] |
+| Tripnet   | ResNet-18 | Low        | CholecT50 | RDV           |   [Download] |
+| Tripnet   | ResNet-18 | High       | CholecT50 | Challenge     |   [Download] |
 
 <br />
 
@@ -229,10 +241,10 @@ Adding custom datasets is quite simple, what you need to do are:
 TensorFlow v1
 | Model | AP<sub>i</sub> | AP<sub>iv</sub> | AP<sub>it</sub> |AP<sub>IVT</sub> | Link |
 ------------|------------|------|-----|-----|-----|
-|Naive CNN  | 27.5 | 7.5 | 6.8 | 5.9 | [Google] [Baidu] |
-|MTL baseline | 74.6 |14.0 | 7.2 | 6.4 | [Google] [Baidu] |
-|Tripnet w/o CAG   | 89.5 | 20.6 | 12.1 | 12.1 | [Google] [Baidu] |
-|Tripnet w/c untrained 3Dis | 89.7 | 16.7 | 7.6 | 6.3 | [Google] [Baidu] |
+|Naive CNN  | 27.5 | 7.5 | 6.8 | 5.9 | [Download] |
+|MTL baseline | 74.6 |14.0 | 7.2 | 6.4 | [Download] |
+|Tripnet w/o CAG   | 89.5 | 20.6 | 12.1 | 12.1 | [Download] |
+|Tripnet w/c untrained 3Dis | 89.7 | 16.7 | 7.6 | 6.3 | [Download] |
 
 
 Models are being re-trained and weights are released periodically.
