@@ -18,7 +18,8 @@
 
 This repository contains the implementation code, inference code, and evaluation scripts.<br />[![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405) [![Journal Publication](https://img.shields.io/badge/Spinger-LNCS%2012263-magenta)](https://link.springer.com/chapter/10.1007/978-3-030-59716-0_35)
 
-
+###  News
+- [ **17/09/2025** ]: Check out our [CAMMA Dataset Overlaps](https://github.com/CAMMA-public/camma_dataset_overlaps) repository for an analysis of video overlaps across Cholec80, CholecT50, and Endoscapes to ensure fair dataset splits.
 
 # Abstract
 Recognition of surgical activity is an essential component to develop context-aware decision support for the operating room. In this work, we tackle the recognition of fine-grained activities, modeled as action triplets <instrument, verb, target> representing the tool activity. 
